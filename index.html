@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Vue</title>
+    <script src="https://unpkg.com/vue@next"></script> <!--Para instalação do Vue no projeto-->
+    <script src="src/app.js" defer></script><!--importando os dados que serão inseridos-->
+</head>
+<body>
+    <div id="app"><!--Abrindo a div pois o projeto precisa começar por algum ponto da pagina-->
+        <form id="app-form">
+            <input type="text" v-model="input_name" placeholder="Digite o seu nome">
+            <input type="submit" value="Enviar" v-on:click="submitForm"> 
+        <p>O meu nome é: {{ name }}, e tenho {{age}} anos.</p><!--Aqui o paragrafo está puxando as variaveis ja definidas no app.js fazendo como se fosse uma consulta de seus valores, retornando-as quando fazemos uma "consulta"-->
+    </form>
+    </div>
+</body>
+</html>
