@@ -1,26 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <PrimeiroComponente /> <!--Aqui puxa todo o conteudo aramzenado no componente PrimeiroComponente-->
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PrimeiroComponente from './components/PrimeiroComponente.vue';
 
-export default {
+export default { //exportando as configurações estabelecidas no main.js
   name: 'App',
-  components: {
-    HelloWorld
+  components: { // define quais os componetes que serão requisitados 
+    PrimeiroComponente
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
