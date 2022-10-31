@@ -1,6 +1,7 @@
 <template>
     <div>
-        <p>No momento eu sou um {{profissão}}</p>
+        <p v-if="esta_trabalhando">No momento eu estou trabalhando</p> <!--Aqui ele introduz a condicional utilizando prorpio do Vue, o v-if, caso o parametro esteja defindo como true, a mensagem ira retornar na tela, caso esteja defindo como falso, ele não ira retornar nada-->
+        <p v-else>Estou em busca de novas oportunidades</p><!--Mensagem padrão que irá retornar quando a condição do v-if não for cumprida, detalhe: v-else sempre tem que estar abaixo do v-if para funcionar-->
         <p>Utilizo as seguintes tecnologias: </p>
         <ul>
             <li>Html</li>
@@ -8,6 +9,7 @@
             <li>Vue</li>
             <li>JavaScript</li>
         </ul>
+        <p v-show="mostrar_email">Mande uma mensagem para esse email {{email}}</p>
     </div>
 </template>
 
@@ -15,8 +17,10 @@
     export default {
         name: 'Info',
         data() {
-            return {
-                profissão: 'Aluno'
+            return {              
+                esta_trabalhando: false, //Cria o parametro de que caso seja true ele irá retornar a mensagem, e caso seja falso não retorna mensagem nenhuma
+                mostrar_email: true,
+                email:'borgarelli@outlook.com'
             }
         }
     }
