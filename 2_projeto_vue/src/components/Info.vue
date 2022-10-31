@@ -10,17 +10,24 @@
             <li>JavaScript</li>
         </ul>
         <p v-show="mostrar_email">Mande uma mensagem para esse email {{email}}</p>
+        <p>Para acessar meu portfólio <a v-bind:href="meu_link" target="_blank">basta clicar aqui</a></p><!--v-bind é o responsavel por conseguir mudar o link para o parametro definido no data, conseguindo fazer conexão dos 2-->
+        <Picture />
     </div>
 </template>
 
 <script>
+import Picture from './Picture.vue';
     export default {
         name: 'Info',
+        components: {
+            Picture
+        },
         data() {
             return {              
                 esta_trabalhando: false, //Cria o parametro de que caso seja true ele irá retornar a mensagem, e caso seja falso não retorna mensagem nenhuma
                 mostrar_email: true,
-                email:'borgarelli@outlook.com'
+                email:'borgarelli@outlook.com',
+                meu_link: 'https://google.com'
             }
         }
     }
