@@ -9,7 +9,7 @@
     export default {
         name: 'PrimeiroComponente',
         data() {
-            return { // Instancia os dados que iram ser retornados quando requisitados dentro do template
+            return { // Instancia os dados que iram ser retornados quando requisitados dentro do template ou mais conhecidos como chaves
                 nome: "Kauã", 
                 profissão: "Web developer"
             }
