@@ -1,5 +1,8 @@
 <template>
-  <PrimeiroComponente /> <!--Aqui puxa todo o conteudo aramzenado no componente PrimeiroComponente-->
+  <div>
+    <PrimeiroComponente /> <!--Aqui puxa todo o conteudo aramzenado no componente PrimeiroComponente-->
+    <p>Eu estou {{teste}} o projeto Vue em funcionamento</p>
+  </div>
 </template>
 
 <script>
@@ -9,6 +12,11 @@ export default { //exportando as configurações estabelecidas no main.js
   name: 'App',
   components: { // define quais os componetes que serão requisitados 
     PrimeiroComponente
+  },
+  data() {
+    return {
+      teste: "testando"
+    }
   }
 }
 </script>
