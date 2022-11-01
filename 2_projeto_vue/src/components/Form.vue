@@ -2,7 +2,7 @@
     <div>
         <h2>Meu formulário</h2>
         <form>
-            <div> <!--Só pra quebrar linha-->
+            <div> <!--Só para quebrar linha-->
                 <InputText />
             </div>
 
