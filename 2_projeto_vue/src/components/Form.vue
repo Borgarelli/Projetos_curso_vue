@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>Meu formulário</h2>
-        <form action="" @submit="enviarFormulario($event)"> <!--Atribuindo um evento ao formulário de quando ele enviar algum valor dentro dos inputs, ele recarregar a página por padrão, porém com esse $event atual, definido dentro do methods ele impede de cumprir esse evento, não tendo um reload na página, mas ainda recebendo um valor quando é feio o submit, porém só pode ser visto atráves do console-->
+        <form action="" @submit="enviarFormulario($event)"> <!--Atribuindo um evento ao formulário de quando ele enviar algum valor dentro dos inputs, ele recarregar a página por padrão, porém com esse $event atual, definido dentro do methods ele impede de cumprir esse evento, não gerando um reload na página, mas ainda recebendo um valor quando é feio o submit, porém só pode ser visto atráves do console-->
             <div> <!--Só para quebrar linha-->
                 <!--<InputText /> retirado parra a aula de eventos-->
                 <input type="text" v-model="name"> <!--Esse input está conectado diretamente com o data, que vai armazenar os valores ali-->
