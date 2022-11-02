@@ -13,7 +13,7 @@
             <button @click="showEmail">{{texto_button}}</button> <!--O @click está proporcionado um evento para o button, sendo referenciado pelo método passado dentro do export default como objeto no methods-->
         </div>
         <p v-show="mostrar_email">Mande uma mensagem para esse email {{email}}</p> <!--Cria como se fosse uma requisição estilo v-if e else, porém o v-show apenas mostra caso seja uma condição true, caso seja false ela não retorna nada-->
-        <p>Para acessar meu portfólio <a v-bind:href="meu_link" target="_blank">basta clicar aqui</a></p> <!--v-bind é o responsavel por conseguir mudar o link para o parametro definido no data, conseguindo fazer conexão dos 2-->
+        <p class="teste">Para acessar meu portfólio <a v-bind:href="meu_link" target="_blank">basta clicar aqui</a></p> <!--v-bind é o responsavel por conseguir mudar o link para o parametro definido no data, conseguindo fazer conexão dos 2-->
         <Picture />
     </div>
 </template>
@@ -46,3 +46,9 @@ import Picture from './Picture.vue';
         }
     }
 </script>
+
+<style> /*Outro exemplo de Css global, que atinge de forma global o App.vue, mesmto estando dois niveis abaixo na arvore hierarquica */
+    .paragrafo-pai{
+        color: red;
+    }
+</style>
