@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <Header :esta_logado=false />
     <PrimeiroComponente /> <!--Aqui puxa todo o conteudo aramzenado no componente PrimeiroComponente-->
     <p class="paragrafo-pai">Eu estou {{teste}} o projeto Vue em funcionamento</p>
     <LifeCycle /> <!--Implementação do LifeCycle-->
