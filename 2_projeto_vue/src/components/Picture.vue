@@ -1,21 +1,28 @@
 <template>
     <div>
         <img :src="avatar" :alt="descricao"> <!--Esses : são o v-binde de forma resumida, gastando menos tempo na hora de defini-los-->
-        <Reutilizacao /> <!--Exeplo de reutilização-->
+        <MudarImagem @mudar-imagem="trocarImagem" />
     </div>
 </template>
 
 <script>
-import Reutilizacao from './Reutilizacao.vue';
+import MudarImagem from './MudarImagem.vue';
+
     export default {
         name:'Picture',
         components: {
-            Reutilizacao
+            Reutilizacao,
+            MudarImagem
         },
         data() {
             return {
                 avatar: '/img/avatar.png',
                 descricao: 'kauã'
+            }
+        },
+        methods: {
+            trocarImagem() {
+                this.avatar ="/img/avatar2.png"
             }
         }
     }
