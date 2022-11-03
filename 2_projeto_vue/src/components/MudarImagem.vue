@@ -1,14 +1,12 @@
 <template>
     <div>
-        <button @click="$emit('mudarimagem')">Clique aqui para mudar a imagem</button>
+        <button @click="$emit('mudarImagem')">Clique aqui para mudar a imagem</button>
     </div>
 </template>
 
 <script>
     export default {
         name: 'MudarImagem',
-        emits: [
-            'mudarimagem'
-        ]
+        emits: ['mudarImagem']
     }
 </script>
