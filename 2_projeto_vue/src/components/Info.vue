@@ -1,5 +1,6 @@
 <template>
     <div>
+        <!-- <p>{{compEmail}} - {{email}}</p> Exemplo utilizado para passar o dado de Pessao.vue pelo Props -->
         <p v-if="esta_trabalhando">No momento eu estou trabalhando</p> <!--Aqui ele introduz a condicional utilizando um componente proprio do Vue, o v-if, caso o parametro esteja definido como true, a mensagem ira retornar na tela, caso esteja definido como falso, ele não ira retornar nada-->
         <p v-else>Estou em busca de novas oportunidades</p> <!--Mensagem que irá retornar quando a condição do v-if não for cumprida, detalhe: v-else sempre tem que estar abaixo do v-if para funcionar-->
         <p>Utilizo as seguintes tecnologias para front-end: </p>
@@ -32,11 +33,16 @@ import Picture from './Picture.vue';
         components: {
             Picture
         },
+        props: { //Aqui recebe todas as informações enviadas de forma hardcode pelo Pessoa.vue
+            email: String, //Foi necessário criar essa "chave" para armazenar o dado enviado e assim, podendo ser referenciada lá emcima como se fosse um parametro passado dentro do data
+            esta_trabalhando: Boolean // Nova chave para receber o valor Boolean de dentro de Pessoa.vue, por ser um valor boleano ele não precisou ser refernciado dentro de data no Pessoa.vue, apenas ja definindo se era true ou false dentro da importação de Info.vue
+        },
         data() {
             return {              
-                esta_trabalhando: false, //Cria o parametro de que caso seja true ele irá retornar a mensagem, e caso seja falso não retorna mensagem nenhuma, sendo chamado no primeiro parágrafo
+              
+                // esta_trabalhando: false, Comitado pela aula de props // Cria o parametro de que caso seja true ele irá retornar a mensagem, e caso seja falso não retorna mensagem nenhuma, sendo chamado no primeiro parágrafo
                 mostrar_email: false, //Alterado para false para mostrar o funcionamento do metodo criado para mostrar o paragrafo com o email
-                email: 'borgarelli@outlook.com',
+                // email: 'borgarelli@outlook.com', Comitado pela aula de Props
                 meu_link: 'https://google.com',
                 texto_button: 'Mostrar e-mail',
                 frontend_technologies: ['Html', 'CSS', 'Vue'], //Criando um array de formato simples

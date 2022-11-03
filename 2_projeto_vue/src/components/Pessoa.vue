@@ -1,7 +1,8 @@
 <template>
     <div>
         <h2>Essa é uma descrição da Pessoa: {{nome}}</h2>
-        <Info />
+        <!--<Info  email="borgarellitavares@gmail.com"/> Exemplo da utilização do Props, enviando essa informação para o parametro de compEmail dentro de Info.vue-->
+        <Info :email="email" :esta_trabalhando=false /> <!--Passando dados de forma dinamica, utilizando props com v-bind, primeiro ele pega o dado armazenado em data e envia para Info e o armazena dentro do props, e assim o Info.vue vai utilizar em todas as referencias de email, o email definido dentro de Pessoa-->
         <Form />
     </div>
 </template>
@@ -17,7 +18,8 @@ import Form from './Form.vue';
         },
         data() {
             return {
-                nome:'Kauã'
+                nome:'Kauã',
+                email:'Borgarellitavares@outlook.com'
             }
         }
     }
